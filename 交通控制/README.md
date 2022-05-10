@@ -4,8 +4,7 @@
     需保证exe文件与img文件夹（存有图片资源）同根平级，否则程序无法正常加载图片。
     OS_1/src/com/clq文件夹下为源代码。
     源码于作业截止后上传
-
-4.除exe外，OS_1/out/artifacts/OS_1_jar文件夹下的jar包也可以在命令行下执行java -jar命令执行。
+    除exe外，out/artifacts/OS_1_jar文件夹下的jar包也可以在命令行下执行java -jar命令执行。
 ## 1.界面设计
 
 <img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%871.png" width="500px">
