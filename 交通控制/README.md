@@ -8,7 +8,7 @@
 4.除exe外，OS_1/out/artifacts/OS_1_jar文件夹下的jar包也可以在命令行下执行java -jar命令执行。
 ## 1.界面设计
 
-<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%871.png" width="500px">
+<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%871.png" width="500px">
 
 *注：以界面中向上视为实际中向北* <br>
 ①界面左上角显示从程序运行开始计时到现在经过的时间（最多支持程序运行100000秒）。<br>
@@ -20,7 +20,7 @@
 ### ①总体算法设计
    本项目需要实现十字路口交通灯控制机制。当用户按下添加按钮后，开启一个新进程，实现车辆从按钮位置沿指定方向前进，在斑马线前进行判断，若对应交通灯不为绿灯或者当前十字路口中心有垂直向车辆正在行驶时阻塞自身进程，等到交通灯变为绿灯且十字路口中心无垂直向车辆行驶时继续执行自身进程，沿原方向行驶至界面外时，结束进程。<br>
    第一辆私家车行驶进程的状态转换图如下：<br>
-   <img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%872.png" width="500px">
+   <img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%872.png" width="500px">
    
 *注：对于第二个及之后的车辆，在行驶至路口前还需对前方车辆状态进行判断，若前方有车辆停止则自身也立刻进入等待状态，当前方车辆前进时，状态转换图同上。*<br>
 ### ②车辆行驶算法设计
@@ -35,29 +35,29 @@
 
 ## 3.运行展示
 ### ①南北向红灯、东西向绿灯时：<br>
-<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%873.png" width="400px">
+<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%873.png" width="400px">
 
 此时东西向车辆正常依次行驶，南北向车辆依次等待。<br>
 
 ### ②南北向绿灯、东西向红灯，但东西向道路先有一警车驶过时：<br>
-<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%874.png" width="400px">
+<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%874.png" width="400px">
 
 由于警车率先驶入路口中心，南北向车辆即使对应绿灯，但仍需要等待警车驶离路口中心再前进。<br>
 当警车驶离路口后，十字路口状态如图：<br>
-<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%875.png" width="400px">
+<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%875.png" width="400px">
 
 ### ④南北向黄灯、东西向红灯时：<br>
-<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%876.png" width="400px">
+<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%876.png" width="400px">
 
 尽管向西的道路中有紧急情况的救护车可以无视红灯，但其前方的私家车则必须等待红灯结束再前进，因此救护车需要排在私家车后方，等待前方私家车前进后再跟进。<br>
 当东西向转为绿灯时，十字路口状态如图：<br>
-<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%877.png" width="400px">
+<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%877.png" width="400px">
 
 ### ④南北向红灯、东西向绿灯，且东西向道路中车辆正常行驶时：<br>
-<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%878.png" width="400px">
+<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%878.png" width="400px">
 
 此时南北向道路中有一救护车行驶至路口，尽管救护车紧急情况可以无视红灯，但前方东西向车辆正在正常行驶，因此救护车需要进行等待，当前方东西向车辆全部离开路口中心时再前进。<br>
 当东西向车辆全部离开路口中心，且南北向仍为红灯时，十字路口状态如图：<br>
-<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/img/%E5%9B%BE%E7%89%879.png" width="400px">
+<img src="https://github.com/LuWa-Chen/OperatingSystem/blob/main/%E4%BA%A4%E9%80%9A%E6%8E%A7%E5%88%B6/images/%E5%9B%BE%E7%89%879.png" width="400px">
 
 需要向南行驶的私家车继续等待红灯，有紧急情况的救护车无视红灯直接前进。
